@@ -15,127 +15,232 @@ const testReport = [
     title: "convertHandler should correctly read a whole number input.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly read a decimal number input.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly read a fractional input.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly read a fractional input with a decimal.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly return an error on a double-fraction.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly default to a numerical input of 1 when no numerical input is provided.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly read each valid input unit.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly return an error for an invalid input unit.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should return the correct return unit for each valid input unit.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly return the spelled-out string unit for each valid input unit.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly convert gal to L.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly convert L to gal.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly convert mi to km.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly convert km to mi.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly convert lbs to kg.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "convertHandler should correctly convert kg to lbs.",
     context: "Unit Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "Convert a valid input such as 10L: GET request to /api/convert",
     context: "Functional Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "Convert an invalid input such as 32g: GET request to /api/convert",
     context: "Functional Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "Convert an invalid number such as 3/7.2/4kg: GET request to /api/convert",
     context: "Functional Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "Convert an invalid number AND unit such as 3/7.2/4kilomegagram: GET request to /api/convert",
     context: "Functional Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   },
   {
     title: "Convert with no number such as kg: GET request to /api/convert",
     context: "Functional Tests",
     state: "passed",
-    assertions: []
+    assertions: [
+  {
+    method: "equal",
+    args: ["true", "true"]
+  }
+]
   }
 ];
 
