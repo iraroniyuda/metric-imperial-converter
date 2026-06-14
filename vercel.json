@@ -14,13 +14,7 @@
   ],
   "functions": {
     "server.js": {
-      "includeFiles": [
-        "tests/**",
-        "controllers/**",
-        "routes/**",
-        "test-runner.js",
-        "assertion-analyser.js"
-      ]
+      "includeFiles": "tests/**"
     }
   }
 }
