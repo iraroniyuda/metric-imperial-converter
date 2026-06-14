@@ -6,12 +6,11 @@ const cors = require("cors");
 require("dotenv").config();
 
 const apiRoutes = require("./routes/api.js");
+const fccTestingRoutes = require("./routes/fcctesting.js");
 
 const app = express();
 
 const port = process.env.PORT || 3000;
-const isVercel = process.env.VERCEL === "1";
-const isTest = process.env.NODE_ENV === "test";
 
 let testsStarted = false;
 
@@ -39,7 +38,6 @@ app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Index page
 app.route("/").get(function (req, res) {
   res.send(`
     <h1>Metric-Imperial Converter</h1>
@@ -49,11 +47,7 @@ app.route("/").get(function (req, res) {
 });
 
 // FCC testing routes
-// Needed so freeCodeCamp can read unit and functional test results.
-if (!isVercel || isTest) {
-  const fccTestingRoutes = require("./routes/fcctesting.js");
-  fccTestingRoutes(app);
-}
+fccTestingRoutes(app);
 
 // API routes
 apiRoutes(app);
@@ -64,19 +58,18 @@ app.use(function (req, res) {
 });
 
 // Local server only
-if (!isVercel) {
+if (require.main === module) {
   app.listen(port, function () {
     console.log("Listening on port " + port);
 
-    if (isTest) {
+    if (process.env.NODE_ENV === "test") {
       startTests();
     }
   });
 }
 
-// Vercel does not use app.listen.
-// But FCC still needs the tests to run when NODE_ENV=test.
-if (isVercel && isTest) {
+// Vercel / FCC test mode
+if (process.env.NODE_ENV === "test") {
   startTests();
 }
 
