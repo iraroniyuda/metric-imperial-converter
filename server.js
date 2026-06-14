@@ -7,7 +7,6 @@ require("dotenv").config();
 
 const apiRoutes = require("./routes/api.js");
 const fccTestingRoutes = require("./routes/fcctesting.js");
-const runner = require("./test-runner");
 
 const app = express();
 
@@ -30,14 +29,14 @@ fccTestingRoutes(app);
 apiRoutes(app);
 
 // 404 Not Found Middleware
-app.use(function (req, res, next) {
+app.use(function (req, res) {
   res.status(404).type("text").send("Not Found");
 });
 
 const port = process.env.PORT || 3000;
 
-// Start server only when running locally with npm start.
-// On Vercel and during tests, the app is exported instead.
+// Start server only when running locally.
+// Vercel will import and run the Express app as a serverless function.
 if (require.main === module) {
   app.listen(port, function () {
     console.log("Listening on port " + port);
@@ -47,6 +46,7 @@ if (require.main === module) {
 
       setTimeout(function () {
         try {
+          const runner = require("./test-runner");
           runner.run();
         } catch (e) {
           console.log("Tests are not valid:");
